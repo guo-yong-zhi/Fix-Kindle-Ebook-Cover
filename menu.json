@@ -1,0 +1,29 @@
+{
+	"items": [
+		{
+			"name": "Tools",
+			"priority": -10,
+			"items": [
+				{
+					"name": "Fix Cover",
+					"priority": 100,
+					"items": [
+						{
+							"name": "Fix",
+							"priority": 1,
+							"action": "python3 -u fix_kindle_ebook_cover.py /mnt/us >log.txt && eips 30 1 'fix success' 2>&1",
+							"exitmenu": true
+						},
+						{
+							"name": "Show log",
+							"priority": 2,
+							"action": "../leafpad/bin/leafpad log.txt",
+							"param": "",
+							"exitmenu": false
+						}
+					]
+				}
+			]
+		}
+	]
+}
